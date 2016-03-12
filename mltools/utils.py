@@ -266,6 +266,7 @@ def bootstrapData(X, Y=None, n_boot=None):
     If Y is not present or None, returns only Xboot (non-tuple)
     """
     nx,dx = twod(X).shape
+
     Y = Y.flatten()
     if n_boot is None: n_boot = nx
 
@@ -278,7 +279,6 @@ def bootstrapData(X, Y=None, n_boot=None):
     Y = Y[idx]
 
     return (X,Y)
-
 
 
 ################################################################################
